@@ -3,7 +3,7 @@ echo Configuring socat...
 
 socatParameters="TCP:${STUNNEL_HOST}"
 
-if [[ -n "STUNNEL_HTTP_PROXY" ]]; then
+if [[ -n "$STUNNEL_HTTP_PROXY" ]]; then
     # если указан http-прокси, подключение будет происходить через него
     socatParameters="PROXY:${STUNNEL_HTTP_PROXY}:${STUNNEL_HOST},proxyport=${STUNNEL_HTTP_PROXY_PORT}"
 
